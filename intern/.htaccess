@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Passwortgeschütztes Verzeichnis"
+AuthUserFile https://code.joergi.io/kruemelkinder/intern/.htpasswd
+Require valid-user
