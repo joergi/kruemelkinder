@@ -1,5 +1,6 @@
 body {
     background-color: #00DDFF;
+
 }
 
 #wrapper {
@@ -64,4 +65,30 @@ hr {
 .green {
     color: #5fb84e;
     background-color: #5fb84e;
+}
+.smaller {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    width: 100px;
+}
+#pics-left {
+    width: 100px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+#pics-right {
+    width: 100px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
