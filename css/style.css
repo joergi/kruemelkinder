@@ -14,7 +14,7 @@ width: 100%;
     background-color: #FFFFFF;
     border-radius: 50px;
     width: 40em;
-    height: auto;
+    height: 50em;
 }
 
 .content {
@@ -91,4 +91,21 @@ hr {
     position: absolute;
     right: 0;
     top: 0;
+}
+
+#door-and-ring {
+    float: none;
+    position: absolute;
+    left: 50%;
+    margin-left: 17.5em;
+    top: 14em;
+    width: 100px;
+
+}
+
+.door {
+    width: 100px;
+}
+.ring {
+    width: 100px;
 }
