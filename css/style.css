@@ -1,7 +1,7 @@
 body {
     background-color: #00DDFF;
-
 }
+
 
 #wrapper {
 width: 100%;
@@ -31,7 +31,6 @@ width: 100%;
     /*background-color: #FF0000;*/
     text-align: left;
 }
-
 
 .headline-name {
     font-size: 1.6em;
@@ -71,26 +70,24 @@ hr {
     border: 0;
     margin: 0;
     width: 100px;
+    border-image-width: 0;
+}
+
+.pics {
+    position: absolute;
+    width: 100px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    font-size: 0;
 }
 #pics-left {
-    width: 100px;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    position: absolute;
     left: 0;
-    top: 0;
 }
 
-
 #pics-right {
-    width: 100px;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    position: absolute;
     right: 0;
-    top: 0;
 }
 
 #door-and-ring {
