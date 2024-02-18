@@ -4,11 +4,33 @@ html {
 
 body {
     background-color: #00DDFF;
-    background-image: url("../img/kitaleiste_1_height_2574.jpg"), url("../img/kitaleiste_2_height_2574.jpg");
     background-position: left top, right top;
     background-repeat: no-repeat;
     background-size: auto 100%;
     overflow-x: hidden;
+}
+@media all and (max-height: 800px) {
+    body {
+        background-image: url("../img/kitaleiste_1_height_800.jpg"), url("../img/kitaleiste_2_height_800.jpg");
+    }
+}
+
+@media  all and (min-height: 801px) and (max-height: 1094px) {
+    body {
+        background-image: url("../img/kitaleiste_1_height_1094.jpg"), url("../img/kitaleiste_2_height_1094.jpg");
+    }
+}
+
+@media  all and (min-height: 1095px) and (max-height: 1600px) {
+    body {
+        background-image: url("../img/kitaleiste_1_height_1600.jpg"), url("../img/kitaleiste_2_height_1600.jpg");
+    }
+}
+
+@media  all and (min-height: 1601px) {
+    body {
+        background-image: url("../img/kitaleiste_1_height_2574.jpg"), url("../img/kitaleiste_2_height_2574.jpg");
+    }
 }
 
 #wrapper {
