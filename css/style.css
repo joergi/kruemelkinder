@@ -1,6 +1,16 @@
 html {
     height: 100%;
 }
+@font-face {
+    font-family: "Generica";
+    src: url("font/generica.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Generica";
+    font-weight: bold;
+    src: url("font/generica_bold.otf") format("opentype");
+}
 
 body {
     background-color: #00DDFF;
@@ -8,6 +18,7 @@ body {
     background-repeat: no-repeat;
     background-size: auto 100%;
     overflow-x: hidden;
+    font-family: 'Generica', sans-serif;
 }
 @media all and (max-height: 800px) {
     body {
@@ -32,6 +43,8 @@ body {
         background-image: url("../img/kitaleiste_1_height_2574.jpg"), url("../img/kitaleiste_2_height_2574.jpg");
     }
 }
+
+
 
 #wrapper {
 width: 100%;
