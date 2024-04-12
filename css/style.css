@@ -114,13 +114,39 @@ hr {
     border-image-width: 0;
 }
 
-#door-and-ring {
-    float: none;
-    position: absolute;
-    left: 50%;
-    margin-left: 17.5em;
-    top: 14em;
-    width: 100px;
+@media all and (min-width: 962px) {
+    #door-and-ring {
+        float: none;
+        position: absolute;
+        left: 50%;
+        margin-left: 17.5em;
+        top: 14em;
+        width: 100px;
+    }
+}
+
+@media all and (min-width: 640px) and (max-width: 962px) {
+    #door-and-ring {
+        float: none;
+        position: absolute;
+        left: 50%;
+        margin-left: 9em;
+        top: 14em;
+        width: 100px;
+    }
+}
+
+
+@media all and (max-width: 639px) {
+    #door-and-ring {
+        float: none;
+        position: absolute;
+        left: 50%;
+        margin-left: 17.5em;
+        top: 14em;
+        width: 100px;
+        z-index: -1;
+    }
 }
 
 .door {
