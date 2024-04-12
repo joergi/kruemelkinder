@@ -125,7 +125,7 @@ hr {
     }
 }
 
-@media all and (min-width: 640px) and (max-width: 962px) {
+@media all and (min-width: 500px) and (max-width: 962px) {
     #door-and-ring {
         float: none;
         position: absolute;
@@ -137,7 +137,7 @@ hr {
 }
 
 
-@media all and (max-width: 639px) {
+@media all and (max-width: 499px) {
     #door-and-ring {
         float: none;
         position: absolute;
