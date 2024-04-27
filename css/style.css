@@ -3,13 +3,13 @@ html {
 }
 @font-face {
     font-family: "Generica";
-    src: url("font/generica.otf") format("opentype");
+    src: url("font/generica.otf");
 }
 
 @font-face {
     font-family: "Generica";
     font-weight: bold;
-    src: url("font/generica_bold.otf") format("opentype");
+    src: url("font/generica_bold.otf");
 }
 
 body {
