@@ -40,7 +40,6 @@ p {
     background-color: #FFFFFF;
     border-radius: 50px;
     height: 44em;
-    width: 40em;
 
 }
 
@@ -53,7 +52,7 @@ p {
     }
 }
 
-@media all and (max-width: 801px) and (max-width: 1000px){
+@media all and (min-width: 801px) and (max-width: 1000px){
     #white-box{
         margin-left: -18em;
         width: 36em;
