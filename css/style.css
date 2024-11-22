@@ -179,12 +179,6 @@ hr {
     border-image-width: 0;
 }
 
-.door {
-    width: 100px;
-}
-.ring {
-    width: 100px;
-}
 #door-and-ring {
     float: none;
     position: absolute;
@@ -199,10 +193,24 @@ hr {
     #door-and-ring {
         margin-left: 9.2em;
     }
+
+    .door {
+        width: 100px;
+    }
+    .ring {
+        width: 100px;
+    }
 }
 @media all and (min-width: 500px) and (max-width: 800px) {
     #door-and-ring {
         margin-left: 10em;
+    }
+
+    .door {
+        width: 100px;
+    }
+    .ring {
+        width: 100px;
     }
 }
 
@@ -210,11 +218,25 @@ hr {
     #door-and-ring {
         margin-left: 10em;
     }
+
+    .door {
+        width: 100px;
+    }
+    .ring {
+        width: 100px;
+    }
 }
 
 @media all and (min-width: 1001px) {
     #door-and-ring {
-        margin-left: 17.5em;
+        margin-left: 17em;
+    }
+
+    .door {
+        width: 140px;
+    }
+    .ring {
+        width: 140px;
     }
 }
 
