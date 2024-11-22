@@ -70,7 +70,7 @@ p {
 @media all and (max-height: 800px) {
     body {
         background-image: url("../img/kitaleiste_1_height_800.jpg"), url("../img/kitaleiste_2_height_800.jpg");
-        background-color: green;
+        /*background-color: green;*/
     }
     p {
         font-size: 1.5em;
@@ -86,7 +86,7 @@ p {
 @media  all and (min-height: 801px) and (max-height: 1094px) {
     body {
         background-image: url("../img/kitaleiste_1_height_1094.jpg"), url("../img/kitaleiste_2_height_1094.jpg");
-        background-color: red;
+        /*background-color: red;*/
     }
     p {
         font-size: 1.5em;
@@ -101,7 +101,7 @@ p {
 @media  all and (min-height: 1095px) and (max-height: 1600px) {
     body {
         background-image: url("../img/kitaleiste_1_height_1600.jpg"), url("../img/kitaleiste_2_height_1600.jpg");
-        background-color: #dd6688;
+        /*background-color: #dd6688;*/
     }
     p {
         font-size: 1.5em;
@@ -116,7 +116,7 @@ p {
 @media  all and (min-height: 1601px) {
     body {
         background-image: url("../img/kitaleiste_1_height_2574.jpg"), url("../img/kitaleiste_2_height_2574.jpg");
-        background-color: coral;
+        /*background-color: coral;*/
     }
     p {
          font-size: 1.5em;
