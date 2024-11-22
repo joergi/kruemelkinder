@@ -43,8 +43,6 @@ p {
 
 }
 
-
-
 @media all and (max-width: 800px){
     #white-box{
         margin-left: -17em;
@@ -192,24 +190,32 @@ hr {
     position: absolute;
     left: 50%;
     margin-left: 17.5em;
-    top: 14em;
+    top: 18em;
     width: 100px;
 }
 
-@media all and (min-width: 962px) {
+
+@media all and (max-width: 499px) {
+    #door-and-ring {
+        margin-left: 9.2em;
+    }
+}
+@media all and (min-width: 500px) and (max-width: 800px) {
+    #door-and-ring {
+        margin-left: 10em;
+    }
+}
+
+@media all and (min-width: 801px) and (max-width: 1000px) {
+    #door-and-ring {
+        margin-left: 10em;
+    }
+}
+
+@media all and (min-width: 1001px) {
     #door-and-ring {
         margin-left: 17.5em;
     }
 }
 
-@media all and (max-width: 499px) {
-    #door-and-ring {
-        margin-left: 17.5em;
-    }
-}
-@media all and (min-width: 500px) and (max-width: 962px) {
-    #door-and-ring {
-        margin-left: 17.5em;
-    }
-}
 
