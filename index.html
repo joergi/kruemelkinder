@@ -3,40 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=yes">
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- add more meta tags later -->
     <title>Kinderladen Krümelkinder</title>
     <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
-<div id="wrapper">
-    <div id="white-box">
-        <h1 class="headline-name">EKT Krümelkinder e.V.</h1>
-        <hr class="pink"/>
-        <hr class="yellow"/>
-        <hr class="blue"/>
-        <hr class="green"/>
-        <div class="content">
-            <div class="inside-content">
-                <p>
-                    Cuvrystraße 39<br/>
-                    10997 Berlin<br/>
-                </p>
-                <p>
-                    Öffnungszeiten:<br/>
-                    Montag bis Freitag<br/>
-                    07:00 – 16:00<br/>
-                </p>
-                <p style="padding-bottom: 3em;">
-                    Telefon:<br/>
-                    030 - 612 882 54
-                </p>
-            </div>
-        </div>
+<header>
+    <div id="logo">
+        <img alt="Kinderladen Krümelkinder logo" src="img/logo.svg" width="420" height="250">
     </div>
-    <div id="door-and-ring">
-        <img class="door" alt="Eingangstür" src="img/eingangstuer.jpg"/>
-        <img class="ring" alt="Klingel" src="img/20_klingel.jpg"/>
+    <button class="hamburger" id="hamburger-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div id="menu">
+        <ul>
+            <li><a href="ueber-uns.html">ÜBER UNS</a></li>
+            <li><a href="raeume.html">RÄUME</a></li>
+            <li><a href="konzept.html">KONZEPT</a></li>
+            <li><a href="projekte.html">PROJEKTE</a></li>
+            <li><a href="netzwerk.html">NETZWERK</a></li>
+        </ul>
     </div>
+</header>
+<div id="content">
+    <div id="buttons-top">
+        <ul>
+            <li>
+                <img src="img/mehrsprachigkeit_gelb.svg" width="200" height="200" alt="Mehrsprachigkeit">
+                <br/><span class="highlight">MEHRSPRACHIG<br/>deutsch - englisch - spanisch</span>
+            </li>
+            <li>
+                <img src="img/projekte.svg" width="200" height="200" alt="Projektarbeit">
+                <br/><span class="highlight">PROJEKTARBEIT<br/>reggio - inspiriert</span>
+            </li>
+            <li>
+                <img src="img/dokumentation_gelb.svg" width="200" height="200" alt="Dokumentation">
+                <br/><span class="highlight">DOKUMENTATION</span>
+            </li>
+        </ul>
+    </div>
+    <div id="buttons-bottom">
+        <ul>
+            <li>
+                <img src="img/altersmischung_gelb.svg" width="200" height="200" alt="Altersmischung"><br/>
+                <span class="highlight">ALTERSMISCHUNG</span>
+            </li>
+            <li><img src="img/vegetarisch_gelb_gf.svg" width="200" height="200" alt="Vegetarische Küche">
+                <br/><span class="highlight">VEGETARISCHE KÜCHE<br/>Hausköchin</span></li>
+            <li>
+                <img src="img/garten_gelb.svg" width="200" height="200" alt="Garten"><br/>
+                <span class="highlight">Garten</span>
+            </li>
+            <li><img src="img/musik_gelb.svg" width="200" height="200" alt="Musik"><br/><span class="highlight">Musik</span></li>
+        </ul>
+    </div>
+
 </div>
+<script src="js/script.js"></script>
 </body>
 </html>
