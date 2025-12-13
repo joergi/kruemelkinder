@@ -1,12 +1,14 @@
 @font-face {
-    font-family: "Generica";
-    src: url("../font/generica.otf") format("opentype");
+    font-family: "Poppins";
+    src: url("../font/poppins/Poppins-Regular.ttf") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "Generica";
-    font-weight: bold;
-    src: url("../font/generica_bold.otf") format("opentype");
+    font-family: "Poppins";
+    font-weight: 900;
+    src: url("../font/poppins/Poppins-Black.ttf") format("truetype");
+    font-display: swap;
 }
 
 html {
@@ -19,7 +21,7 @@ html {
 body {
     background-color: #ffffff;
     background-position: left top, right top;
-    font-family: 'Generica', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -48,7 +50,7 @@ header {
     height: 50px;
     align-items: center;
     font-size: 20px;
-    font-family: 'Generica', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
 
@@ -246,6 +248,27 @@ header {
         display: inline-block;
         font-size: 14px;
     }
+
+    #content {
+        padding: 30px 15px;
+        font-size: 16px;
+    }
+
+    #content h1 {
+        font-size: 24px;
+    }
+
+    #content p {
+        font-size: 16px;
+    }
+
+    #menu ul {
+        font-size: 18px;
+    }
+
+    #menu li {
+        padding: 12px 20px 12px 40px;
+    }
 }
 
 /* Content area styles */
@@ -261,13 +284,51 @@ header {
     font-size: 32px;
 }
 
+/* Section heading style for screenshot */
+#content h2.section-heading {
+    color: #fd35c4; /* pink */
+    position: relative;
+    display: inline-block;
+    font-weight: 900;
+    margin-top: 36px;         /* space before heading */
+    margin-bottom: 0;         /* no gap below to tighten before next element */
+}
+#content h2.section-heading + p { margin-top: 0; }
+#content h2.section-heading + h3 { margin-top: 10px; } /* tighter h2->h3 spacing */
+
+#content h2.section-heading::before,
+#content h2.section-heading::after {
+    content: "[";
+    color: #fd35c4;
+    font-weight: 900;
+    margin: 0 6px 0 0;        /* slight gap from bracket to text */
+}
+#content h2.section-heading::after { content: "]"; margin: 0 0 0 6px; }
+
+/* h3 general spacing */
+#content h3 {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    margin-top: 20px;   /* general space before h3 */
+    margin-bottom: 0;   /* no gap after h3 */
+}
+#content h3 + p { margin-top: 0; }
+
 #content p {
     line-height: 1.6;
     margin-bottom: 20px;
     font-size: 18px;
 }
 
-/* Image Gallery Styles */
+/* Right-aligned italic update note */
+.updated-note {
+    text-align: right;
+    font-style: italic;
+    margin-top: 8px;          /* small space from previous paragraph */
+}
+
+/* Gallery styles */
 .image-gallery {
     padding: 40px 20px;
     max-width: 1400px;
@@ -279,23 +340,169 @@ header {
     gap: 20px;
     margin-bottom: 20px;
     justify-content: center;
+    flex-wrap: nowrap; /* keep all images in one row */
 }
 
 .gallery-row img {
-    width: calc(50% - 10px);
     height: auto;
     object-fit: cover;
     display: block;
+    max-width: 100%;
 }
 
-/* Mobile view for gallery */
+/* Exact per-row columns */
+.gallery-row.row-1 img { width: calc((100% - 3 * 20px) / 4); }
+.gallery-row.row-2 img { width: calc((100% - 5 * 20px) / 6); }
+.gallery-row.row-3 img { width: calc((100% - 2 * 20px) / 3); }
+
+/* Mobile view: still single column per image but allow horizontal scroll if needed */
 @media (max-width: 768px) {
-    .gallery-row {
-        flex-direction: column;
-        gap: 15px;
+    .image-gallery { overflow-x: auto; }
+    .gallery-row { min-width: 600px; }
+    .gallery-row.row-1 img,
+    .gallery-row.row-2 img,
+    .gallery-row.row-3 img { width: calc((100% - 3 * 20px) / 4); }
+}
+
+/* Schedule layout inside paragraph */
+.schedule { display: block; }
+.schedule-row { display: grid; grid-template-columns: 220px auto 420px; align-items: start; column-gap: 16px; row-gap: 0; margin: 6px 0; }
+.schedule-row .time { white-space: nowrap; }
+.schedule-row .rule { border-bottom: 2px solid #000; height: 0.9em; margin-top: 6px; margin-left: 12px; }
+.schedule-row .desc { line-height: 1.4; }
+.schedule-row .desc small { color: #333; display: block; margin-top: 2px; }
+.schedule-row .desc strong { font-weight: 700; }
+.schedule-row .desc em { font-style: normal; font-weight: 700; }
+
+@media (max-width: 1024px) {
+  .schedule-row { grid-template-columns: 200px auto 1fr; }
+}
+@media (max-width: 768px) {
+  .schedule-row {
+    display: block;
+    margin: 0 0 10px 0;
+    padding: 8px 0;
+    border-bottom: 2px solid #000;
+  }
+
+  .schedule-row .time {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    color: #fd35c4;
+  }
+
+  .schedule-row .rule {
+    display: none;
+  }
+
+  .schedule-row .desc {
+    grid-column: auto;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+    #logo img {
+        max-width: 200px;
     }
 
-    .gallery-row img {
-        width: 100%;
+    #content {
+        padding: 20px 12px;
+        font-size: 15px;
+    }
+
+    #content h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    #content h2.section-heading {
+        font-size: 18px;
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+
+    #content h3 {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    #content p {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .schedule {
+        display: block;
+    }
+
+    .schedule-row {
+        display: block;
+        margin: 0 0 10px 0;
+        padding: 8px 0;
+        border-bottom: 2px solid #000;
+    }
+
+    .schedule-row .time {
+        font-size: 13px;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 4px;
+        color: #fd35c4;
+    }
+
+    .schedule-row .rule {
+        display: none;
+    }
+
+    .schedule-row .desc {
+        font-size: 14px;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        line-height: 1.4;
+    }
+
+    .schedule-row .desc small {
+        color: #333;
+        display: block;
+        margin-top: 2px;
+        font-size: 12px;
+    }
+
+    .schedule-row .desc strong {
+        font-weight: 700;
+    }
+
+    .schedule-row .desc em {
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    #buttons-top ul,
+    #buttons-bottom ul {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    #buttons-top img,
+    #buttons-bottom img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .gallery-row {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .gallery-row.row-1 img,
+    .gallery-row.row-2 img,
+    .gallery-row.row-3 img {
+        width: calc((100% - 2 * 10px) / 3);
     }
 }
+
