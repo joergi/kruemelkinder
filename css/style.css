@@ -422,13 +422,16 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
 .gallery-row.row-2 img { width: calc((100% - 5 * 20px) / 6); }
 .gallery-row.row-3 img { width: calc((100% - 2 * 20px) / 3); }
 
-/* Mobile view: still single column per image but allow horizontal scroll if needed */
+/* Mobile view: wrap images to multiple rows instead of horizontal scroll */
 @media (max-width: 768px) {
-    .image-gallery { overflow-x: auto; }
-    .gallery-row { min-width: 600px; }
-    .gallery-row.row-1 img,
-    .gallery-row.row-2 img,
-    .gallery-row.row-3 img { width: calc((100% - 3 * 20px) / 4); }
+    .image-gallery { overflow-x: visible; }
+    .gallery-row {
+        flex-wrap: wrap;
+        min-width: auto;
+    }
+    .gallery-row.row-1 img { width: calc((100% - 1 * 20px) / 2); }
+    .gallery-row.row-2 img { width: calc((100% - 1 * 20px) / 2); }
+    .gallery-row.row-3 img { width: calc((100% - 1 * 20px) / 2); }
 }
 
 /* Schedule layout inside paragraph */
