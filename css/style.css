@@ -34,6 +34,10 @@ header {
     position: relative;
 }
 
+#logo a {
+    border: none;
+    outline: none;
+}
 
 #menu {
     background-color: #fdfd00;
@@ -70,6 +74,19 @@ header {
 #menu a:hover {
     color: #fd35c4;
     text-decoration: none;
+}
+
+#menu a.active {
+    color: #fd35c4;
+}
+
+/* Active menu links per page */
+body.page-ueber-uns #menu a[href="ueber-uns.html"],
+body.page-raeume #menu a[href="raeume.html"],
+body.page-konzept #menu a[href="konzept.html"],
+body.page-projekte #menu a[href="projekte.html"],
+body.page-netzwerk #menu a[href="netzwerk.html"] {
+    color: #fd35c4;
 }
 
 .highlight {
@@ -329,6 +346,55 @@ header {
     margin-top: 8px;          /* small space from previous paragraph */
 }
 
+/* Team gallery styles */
+.team-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 2em;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 180px;
+}
+
+@media (max-width: 768px) {
+    .team-gallery {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .team-member {
+        flex: 0 1 calc(50% - 10px);
+        max-width: none;
+    }
+
+    .team-photo {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+    }
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+    margin-bottom: 0.5em;
+}
+
+.team-name {
+    font-size: 1.1em;
+    margin-top: 0.2em;
+    text-align: center;
+}
+
 /* Gallery styles */
 .image-gallery {
     padding: 40px 20px;
@@ -505,5 +571,19 @@ header {
     .gallery-row.row-3 img {
         width: calc((100% - 2 * 10px) / 3);
     }
-}
 
+    .team-gallery {
+        gap: 15px;
+    }
+
+    .team-member {
+        flex: 0 1 calc(50% - 7.5px);
+        max-width: none;
+    }
+
+    .team-photo {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
