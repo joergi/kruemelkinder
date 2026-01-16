@@ -1,3 +1,12 @@
+:root {
+    --color-white: #ffffff;
+    --color-yellow: #fdfd00;
+    --color-pink: #fd35c4;
+    --color-black: #000;
+    --color-gray: #e0e0e0;
+    --color-dark-gray: #333;
+}
+
 @font-face {
     font-family: "Poppins";
     src: url("../font/poppins/Poppins-Regular.ttf") format("truetype");
@@ -11,6 +20,7 @@
     font-display: swap;
 }
 
+
 html {
     margin: 0;
     padding: 0;
@@ -19,7 +29,7 @@ html {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: var(--color-white);
     background-position: left top, right top;
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -40,7 +50,7 @@ header {
 }
 
 #menu {
-    background-color: #fdfd00;
+    background-color: var(--color-yellow);
     width: 100%;
 
 }
@@ -67,17 +77,17 @@ header {
 }
 
 #menu a {
-    color:black;
+    color: var(--color-black);
     text-decoration: none;
 }
 
 #menu a:hover {
-    color: #fd35c4;
+    color: var(--color-pink);
     text-decoration: none;
 }
 
 #menu a.active {
-    color: #fd35c4;
+    color: var(--color-pink);
 }
 
 /* Active menu links per page */
@@ -86,11 +96,11 @@ body.page-raeume #menu a[href="raeume.html"],
 body.page-konzept #menu a[href="konzept.html"],
 body.page-projekte #menu a[href="projekte.html"],
 body.page-netzwerk #menu a[href="netzwerk.html"] {
-    color: #fd35c4;
+    color: var(--color-pink);
 }
 
 .highlight {
-    background-color: #fdfd00;
+    background-color: var(--color-yellow);
     padding: 3px;
 }
 
@@ -100,8 +110,8 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-    border: 3px solid #fd35c4;
-    background-color: yellow;
+    border: 3px solid var(--color-pink);
+    background-color: var(--color-yellow);
     padding: 10px;
     border-radius: 5px;
 }
@@ -109,7 +119,7 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: black;
+    background-color: var(--color-black);
     border-radius: 3px;
     transition: 0.3s;
 }
@@ -193,7 +203,7 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
         top: 0;
         left: 0;
         flex-direction: column;
-        background-color: #fdfd00;
+        background-color: var(--color-yellow);
         gap: 0;
         height: 100vh;
         padding: 0;
@@ -211,7 +221,7 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
     #menu li {
         padding: 15px 20px 15px 50px;
         width: 100%;
-        border-bottom: 2px solid #fd35c4;
+        border-bottom: 2px solid var(--color-pink);
         box-sizing: border-box;
         margin: 0;
     }
@@ -222,11 +232,11 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
     }
 
     #menu li:first-child {
-        border-top: 2px solid #fd35c4;
+        border-top: 2px solid var(--color-pink);
     }
 
     #menu li:last-child {
-        border-bottom: 2px solid #fd35c4;
+        border-bottom: 2px solid var(--color-pink);
     }
 
     #buttons-top ul {
@@ -304,7 +314,7 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
 
 /* Section heading style for screenshot */
 #content h2.section-heading {
-    color: #fd35c4; /* pink */
+    color: var(--color-pink); /* pink */
     position: relative;
     display: inline-block;
     font-weight: 900;
@@ -317,7 +327,7 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
 #content h2.section-heading::before,
 #content h2.section-heading::after {
     content: "[";
-    color: #fd35c4;
+    color: var(--color-pink);
     font-weight: 900;
     margin: 0 6px 0 0;        /* slight gap from bracket to text */
 }
@@ -385,7 +395,7 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--color-white);
     margin-bottom: 0.5em;
 }
 
@@ -438,9 +448,9 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
 .schedule { display: block; }
 .schedule-row { display: grid; grid-template-columns: 220px auto 420px; align-items: start; column-gap: 16px; row-gap: 0; margin: 6px 0; }
 .schedule-row .time { white-space: nowrap; }
-.schedule-row .rule { border-bottom: 2px solid #000; height: 0.9em; margin-top: 6px; margin-left: 12px; }
+.schedule-row .rule { border-bottom: 2px solid var(--color-black); height: 0.9em; margin-top: 6px; margin-left: 12px; }
 .schedule-row .desc { line-height: 1.4; }
-.schedule-row .desc small { color: #333; display: block; margin-top: 2px; }
+.schedule-row .desc small { color: var(--color-dark-gray); display: block; margin-top: 2px; }
 .schedule-row .desc strong { font-weight: 700; }
 .schedule-row .desc em { font-style: normal; font-weight: 700; }
 
@@ -452,14 +462,14 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
     display: block;
     margin: 0 0 10px 0;
     padding: 8px 0;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--color-black);
   }
 
   .schedule-row .time {
     font-weight: 700;
     display: block;
     margin-bottom: 4px;
-    color: #fd35c4;
+    color: var(--color-pink);
   }
 
   .schedule-row .rule {
@@ -513,7 +523,7 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
         display: block;
         margin: 0 0 10px 0;
         padding: 8px 0;
-        border-bottom: 2px solid #000;
+        border-bottom: 2px solid var(--color-black);
     }
 
     .schedule-row .time {
@@ -521,7 +531,7 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
         font-weight: 700;
         display: block;
         margin-bottom: 4px;
-        color: #fd35c4;
+        color: var(--color-pink);
     }
 
     .schedule-row .rule {
@@ -537,7 +547,7 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
     }
 
     .schedule-row .desc small {
-        color: #333;
+        color: var(--color-dark-gray);
         display: block;
         margin-top: 2px;
         font-size: 12px;
@@ -588,5 +598,42 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
         width: 100%;
         height: auto;
         object-fit: cover;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--color-yellow);
+    width: 100%;
+    padding: 18px 0 14px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    border-top: 2px solid var(--color-pink);
+}
+
+footer a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--color-pink);
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    footer {
+        font-size: 16px;
+        padding: 14px 0 10px 0;
     }
 }
