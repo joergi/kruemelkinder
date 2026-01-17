@@ -36,12 +36,16 @@ body {
     padding: 0;
     overflow-x: hidden;
     width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     display: flex;
     align-items: center;
     position: relative;
+    flex-shrink: 0;
 }
 
 #logo a {
@@ -154,9 +158,9 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 240px;
+    gap: 180px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 #buttons-bottom li {
@@ -305,6 +309,7 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
     max-width: 1400px;
     margin: 0 auto;
     font-size: 18px;
+    flex: 1 0 auto;
 }
 
 #content h1 {
@@ -326,12 +331,10 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
 
 #content h2.section-heading::before,
 #content h2.section-heading::after {
-    content: "[";
     color: var(--color-pink);
     font-weight: 900;
     margin: 0 6px 0 0;        /* slight gap from bracket to text */
 }
-#content h2.section-heading::after { content: "]"; margin: 0 0 0 6px; }
 
 /* h3 general spacing */
 #content h3 {
@@ -601,6 +604,146 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
     }
 }
 
+/* Network page styles */
+.network-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    gap: 60px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.network-intro {
+    flex: 0 0 auto;
+}
+
+.network-intro p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.network-badge {
+    flex: 0 0 auto;
+}
+
+.network-badge img {
+    width: 200px;
+    height: auto;
+}
+
+.network-partners {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.network-partner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Offset layout for middle partner - shift the entire card to the right */
+.network-partner.offset {
+    margin-left: 130px;
+}
+
+.partner-logo {
+    flex-shrink: 0;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.partner-info {
+    flex: 0 1 auto;
+    max-width: 600px;
+    background-color: rgba(253, 53, 196, 0.15);
+    padding: 20px 30px;
+    color: var(--color-black);
+}
+
+.partner-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+.partner-info h3 a {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+.partner-info h3 a:hover {
+    color: var(--color-pink);
+}
+
+.partner-info p {
+    margin: 0;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .network-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .network-intro p {
+        font-size: 16px;
+    }
+
+    .network-badge img {
+        width: 150px;
+    }
+
+    .network-partner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .network-partner.offset {
+        margin-left: 0;
+    }
+
+    .partner-logo {
+        width: 120px;
+    }
+
+    .partner-logo img {
+        max-width: 120px;
+    }
+
+    .partner-info {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .partner-info h3 {
+        font-size: 18px;
+    }
+
+    .partner-info p {
+        font-size: 16px;
+    }
+}
+
 /* Footer styles */
 footer {
     background-color: var(--color-yellow);
@@ -610,11 +753,9 @@ footer {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    position: relative;
-    left: 0;
-    bottom: 0;
     margin: 0;
     border-top: 2px solid var(--color-pink);
+    flex-shrink: 0;
 }
 
 footer a {
