@@ -1,7 +1,7 @@
 :root {
     --color-white: #ffffff;
     --color-yellow: #fdfd00;
-    --color-pink: #fd35c4;
+    --color-pink: #c41e9a;
     --color-black: #000;
     --color-gray: #e0e0e0;
     --color-dark-gray: #333;
@@ -318,7 +318,7 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
 }
 
 /* Section heading style for screenshot */
-#content h2.section-heading {
+#content h1.section-heading {
     color: var(--color-pink); /* pink */
     position: relative;
     display: inline-block;
@@ -326,25 +326,25 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
     margin-top: 36px;         /* space before heading */
     margin-bottom: 0;         /* no gap below to tighten before next element */
 }
-#content h2.section-heading + p { margin-top: 0; }
-#content h2.section-heading + h3 { margin-top: 10px; } /* tighter h2->h3 spacing */
+#content h1.section-heading + p { margin-top: 0; }
+#content h1.section-heading + h2 { margin-top: 5px; } /* tighter h1->h2 spacing */
 
-#content h2.section-heading::before,
-#content h2.section-heading::after {
+#content h1.section-heading::before,
+#content h1.section-heading::after {
     color: var(--color-pink);
     font-weight: 900;
     margin: 0 6px 0 0;        /* slight gap from bracket to text */
 }
 
-/* h3 general spacing */
-#content h3 {
+/* h2 general spacing */
+#content h2 {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
-    margin-top: 20px;   /* general space before h3 */
-    margin-bottom: 0;   /* no gap after h3 */
+    margin-top: 20px;   /* general space before h2 */
+    margin-bottom: 0;   /* no gap after h2 */
 }
-#content h3 + p { margin-top: 0; }
+#content h2 + p { margin-top: 0; }
 
 #content p {
     line-height: 1.6;
@@ -502,13 +502,13 @@ body.page-netzwerk #menu a[href="netzwerk.html"] {
         margin-bottom: 15px;
     }
 
-    #content h2.section-heading {
+    #content h1.section-heading {
         font-size: 18px;
         margin-top: 24px;
         margin-bottom: 8px;
     }
 
-    #content h3 {
+    #content h2 {
         font-size: 16px;
         margin-top: 15px;
     }
